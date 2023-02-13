@@ -28,7 +28,7 @@ module regfile (
 	reg20out,reg21out,reg22out,reg23out,reg24out,reg25out,reg26out,reg27out,reg28out,reg29out,reg30out,reg31out;
 
 
-	register reg0(clock, 0'b1, data_writeReg, reg0out, 1'b1);
+	register reg0(clock, 1'b0, data_writeReg, reg0out, 1'b1);
 	register reg1(clock, selectedWriteReg[1], data_writeReg, reg1out, ctrl_reset);
 	register reg2(clock, selectedWriteReg[2], data_writeReg, reg2out, ctrl_reset);
 	register reg3(clock, selectedWriteReg[3], data_writeReg, reg3out, ctrl_reset);
